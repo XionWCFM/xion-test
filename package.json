@@ -12,7 +12,9 @@
     "lint": "npx @biomejs/biome lint --apply ./app ./src",
     "check": "npx @biomejs/biome check --apply ./app ./src",
     "lint:next": "next lint",
-    "test": "vitest"
+    "test": "vitest",
+    "test:bot":"vitest run --silent --reporter=json --outputFile=./test-result.json",
+    "test:coverage":"vitest run --coverage.all"
   },
   "dependencies": {
     "next": "14.2.3",
