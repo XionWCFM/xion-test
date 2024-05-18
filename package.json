@@ -2,6 +2,7 @@
   "name": "test",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +11,8 @@
     "format": "npx @biomejs/biome format --write ./app ./src",
     "lint": "npx @biomejs/biome lint --apply ./app ./src",
     "check": "npx @biomejs/biome check --apply ./app ./src",
-    "lint:next": "next lint"
+    "lint:next": "next lint",
+    "test": "vitest"
   },
   "dependencies": {
     "next": "14.2.3",
@@ -19,6 +21,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.3",
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
     "@testing-library/user-event": "^14.5.2",
     "@types/eslint": "^8",
