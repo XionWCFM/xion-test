@@ -5,6 +5,9 @@ pre-commit:
     format:
       run: yarn format
       stage_fixed: true
+    lint-next:
+      run: yarn lint:next
+      stage_fixed: true
     lint:
       run: yarn lint
       stage_fixed: true
