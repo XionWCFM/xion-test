@@ -3,10 +3,8 @@ pre-commit:
   parallel: true
   commands:
     format:
-      glob: "*.ts?(x)"
       run: yarn format
       stage_fixed: true
     lint:
-      glob: "*.ts?(x)"
       run: yarn lint
       stage_fixed: true
