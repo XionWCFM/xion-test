@@ -19,7 +19,10 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.37.1",
+    "@tanstack/react-query-next-experimental": "^5.37.1",
     "date-fns": "^3.6.0",
+    "jotai": "^2.8.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18"
@@ -35,6 +38,7 @@
     "@storybook/nextjs": "^8.1.1",
     "@storybook/react": "^8.1.1",
     "@storybook/test": "^8.1.1",
+    "@tanstack/react-query-devtools": "^5.37.1",
     "@testing-library/dom": "^10.1.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
