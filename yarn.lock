@@ -3888,17 +3888,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/react-query-next-experimental@npm:^5.37.1":
-  version: 5.37.1
-  resolution: "@tanstack/react-query-next-experimental@npm:5.37.1"
-  peerDependencies:
-    "@tanstack/react-query": ^5.37.1
-    next: ^13 || ^14
-    react: ^18.0.0
-  checksum: 10c0/8d0ab5579ce7f1bc7f3e6520738dc56f34e1417e3514ea36161abdb8e8ea1d76371e9ae7352c707bb7e0573cd11c95280935e7e56f52821411b7081eac5cef75
-  languageName: node
-  linkType: hard
-
 "@tanstack/react-query@npm:^5.37.1":
   version: 5.37.1
   resolution: "@tanstack/react-query@npm:5.37.1"
@@ -13440,7 +13429,6 @@ __metadata:
     "@suspensive/react": "npm:^2.0.0"
     "@tanstack/react-query": "npm:^5.37.1"
     "@tanstack/react-query-devtools": "npm:^5.37.1"
-    "@tanstack/react-query-next-experimental": "npm:^5.37.1"
     "@testing-library/dom": "npm:^10.1.0"
     "@testing-library/jest-dom": "npm:^6.4.5"
     "@testing-library/react": "npm:^15.0.7"
