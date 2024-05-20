@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { builder } from '../shared/hooks/builder';
+import { builder } from '../../shared/hooks/builder';
 import { Provider } from 'jotai';
 import { Suspense } from 'react';
 

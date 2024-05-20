@@ -1,6 +1,6 @@
 import { renderHook, waitFor } from '@testing-library/react';
 import { useExampleQuery } from './example.api';
-import wrapper from '~/src/mocks/testing-wrapper';
+import wrapper from '~/src/mocks/utils/testing-wrapper';
 
 describe('msw and react query test', () => {
   it('msw test', async () => {
