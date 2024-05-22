@@ -7,23 +7,18 @@ interface HTTPInstance {
   put<T>(url: string, data?: unknown, config?: RequestInit): Promise<T>;
   patch<T>(url: string, data?: unknown, config?: RequestInit): Promise<T>;
 }
-type BaseConfig = {
-  error?: ErrorConstructor;
-};
 
 class HttpClient {
   public http: HTTPInstance;
   private baseURL: string;
   private headers: Record<string, string>;
-  private error: ErrorConstructor;
 
-  constructor(baseUrl = '', injectConfg?: BaseConfig) {
+  constructor(baseUrl = '') {
     this.baseURL = `${baseUrl}`;
     this.headers = {
       csrf: 'token',
       Referer: this.baseURL,
     };
-    this.error = injectConfg?.error ?? Error;
 
     this.http = {
       get: this.get.bind(this),
@@ -51,7 +46,7 @@ class HttpClient {
       });
 
       if (!response.ok) {
-        throw new this.error('Network response was not ok');
+        throw new Error('Network response was not ok');
       }
 
       const responseData: T = await response.json();

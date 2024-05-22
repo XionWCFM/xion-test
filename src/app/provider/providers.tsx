@@ -1,5 +1,5 @@
 'use client';
-import { builder } from '~/src/shared/hooks/builder';
+import { builder } from '~/src/shared/modules/builder';
 import QueryProvider from './query-provider';
 import GlobalStateProvider from './global-state-provider';
 
