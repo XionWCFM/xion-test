@@ -3,12 +3,12 @@ import type { CartItem } from '../model/example.model';
 
 export const createExampleRepository = () => {
   return {
-    readAll: async (): Promise<CartItem[]> => {
+    read: async (): Promise<CartItem[]> => {
       const response = await fetch('/api/hello');
       const result = await response.json();
       return result;
     },
-    add: async (body: CartItem) => {
+    create: async (body: CartItem) => {
       const response = await fetch('/api/hello', {
         method: 'POST',
         body: JSON.stringify(body),
@@ -20,6 +20,14 @@ export const createExampleRepository = () => {
       await fetch(`/api/hello/${id}`, {
         method: 'DELETE',
       });
+    },
+    update: async (body: CartItem) => {
+      const response = await fetch('/api/hello', {
+        method: 'PUT',
+        body: JSON.stringify(body),
+      });
+      const result = await response.json();
+      return result;
     },
   };
 };

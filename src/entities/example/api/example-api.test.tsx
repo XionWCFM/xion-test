@@ -10,14 +10,14 @@ describe('msw and react query test', () => {
 
   it('test', async () => {
     const service = createExampleRepository();
-    const result = await service.add({ id: 3, price: 2, amount: 3 });
-    const add = await service.readAll();
+    const result = await service.create({ id: 3, price: 2, amount: 3 });
+    const add = await service.read();
     console.log(add);
   });
 
   it('test', async () => {
     const service = createExampleRepository();
-    const add = await service.readAll();
-    console.log(add);
+    const read = await service.read();
+    console.log(read);
   });
 });
