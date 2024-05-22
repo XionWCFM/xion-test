@@ -2,7 +2,7 @@ import HttpClient from '~/src/shared/modules/http';
 import type { CartItem } from '../model/example.model';
 
 class ExampleRepository extends HttpClient {
-  getExamples() {
+  getExampleList() {
     return this.http.get<CartItem[]>('/api/hello');
   }
 }
