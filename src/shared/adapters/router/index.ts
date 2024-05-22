@@ -1,6 +1,5 @@
 'use client';
 import { useParams, usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useMemo } from 'react';
 
 export const useInternalRouter = () => {
   const router = useRouter();
@@ -13,23 +12,20 @@ export const useInternalRouter = () => {
   const host = typeof window !== 'undefined' ? window?.location?.host : '';
   const slash = typeof window !== 'undefined' ? '//' : '';
   const basePath = `${protocol}${slash}${host}`;
-  return useMemo(
-    () => ({
-      push: (href: string, option?: { scroll?: boolean }) => router.push(href, option),
-      replace: (href: string, option?: { scroll?: boolean }) => router.replace(href, option),
-      back: () => router.back(),
-      refresh: () => router.refresh(),
-      prefetch: (href: string) => router.prefetch(href),
-      pathname: pathname,
-      searchParams: serachParams ? serachParams.toString() : '',
-      get: (qs: string) => (serachParams ? serachParams.get(qs) : ''),
-      params: params,
-      href: href,
-      hostname: hostname,
-      protocol: protocol,
-      host: host,
-      basePath: basePath,
-    }),
-    [basePath, host, hostname, href, params, pathname, protocol, router, serachParams]
-  );
+  return {
+    push: (href: string, option?: { scroll?: boolean }) => router.push(href, option),
+    replace: (href: string, option?: { scroll?: boolean }) => router.replace(href, option),
+    back: () => router.back(),
+    refresh: () => router.refresh(),
+    prefetch: (href: string) => router.prefetch(href),
+    pathname: pathname,
+    searchParams: serachParams ? serachParams.toString() : '',
+    get: (qs: string) => (serachParams ? serachParams.get(qs) : ''),
+    params: params,
+    href: href,
+    hostname: hostname,
+    protocol: protocol,
+    host: host,
+    basePath: basePath,
+  };
 };

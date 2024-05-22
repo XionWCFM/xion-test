@@ -27,6 +27,7 @@
     "date-fns": "^3.6.0",
     "jotai": "^2.8.0",
     "next": "14.2.3",
+    "qs": "^6.12.1",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -49,6 +50,7 @@
     "@testing-library/user-event": "^14.5.2",
     "@types/eslint": "^8",
     "@types/node": "^20",
+    "@types/qs": "^6",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@vitejs/plugin-react": "^4.2.1",
