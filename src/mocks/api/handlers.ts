@@ -1,11 +1,14 @@
 import { http, HttpResponse } from 'msw';
+import { originCartList } from '../data/cart-list';
+import type { CartItem } from '~/src/entities/example/model/example.model';
 
 export const handlers = [
   http.get('/api/hello', () => {
-    return HttpResponse.json({
-      id: 'c7b3d8e0-5e0b-4b0f-8b3a-3b9f4b3d3b3d',
-      firstName: 'John',
-      lastName: 'Maverick',
-    });
+    return HttpResponse.json(originCartList);
+  }),
+  http.post('/api/hello', async ({ request }) => {
+    const body = (await request.json()) as CartItem;
+    originCartList.push(body);
+    return HttpResponse.json(body);
   }),
 ];

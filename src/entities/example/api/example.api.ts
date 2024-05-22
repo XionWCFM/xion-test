@@ -3,7 +3,11 @@ import type { CartItem } from '../model/example.model';
 
 export const createExampleRepository = () => {
   return {
-    readAll: async () => {},
+    readAll: async (): Promise<CartItem[]> => {
+      const response = await fetch('/api/hello');
+      const result = await response.json();
+      return result;
+    },
     add: async (body: CartItem) => {
       const response = await fetch('/api/hello', {
         method: 'POST',
