@@ -1,5 +1,13 @@
-export type UserTracker = {
-  track: (eventName: string, eventProperty: string) => Promise<void> | void;
-};
+type EventLocation = 'home' | 'landing' | 'fe';
 
-export type EventName = 'sign-up' | 'click' | 'error';
+type EventAction = 'click' | 'pop-up' | 'error' | 'view' | 'open' | 'close';
+
+type EventTarget = 'button' | 'cta' | 'toast' | 'dialog' | 'bottom-sheet';
+
+export type EventTuple = [EventLocation, EventTarget, EventAction];
+
+export type EventName = `${EventLocation}_${EventTarget}_${EventAction}`;
+
+export type UserTracker = {
+  track: (eventName: EventTuple, eventProperty: string) => Promise<void> | void;
+};
