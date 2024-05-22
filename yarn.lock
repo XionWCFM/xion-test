@@ -4799,6 +4799,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@xionhub/token@npm:^0.1.11":
+  version: 0.1.11
+  resolution: "@xionhub/token@npm:0.1.11"
+  checksum: 10c0/86e46406c2c8c059440bcdea073238680fcc567a3a76f1ccafde98dad42c0b0a6e2e111cd19be1b63694f335e8ba6e5eec90dbcd3ea9ff4743c47e005d6487b7
+  languageName: node
+  linkType: hard
+
 "@xtuc/ieee754@npm:^1.2.0":
   version: 1.2.0
   resolution: "@xtuc/ieee754@npm:1.2.0"
@@ -13514,6 +13521,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     "@vitejs/plugin-react": "npm:^4.2.1"
+    "@xionhub/token": "npm:^0.1.11"
     date-fns: "npm:^3.6.0"
     eslint: "npm:8.56.0"
     eslint-config-next: "npm:^14.2.3"

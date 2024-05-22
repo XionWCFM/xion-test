@@ -25,6 +25,7 @@
     "@next/third-parties": "^14.2.3",
     "@suspensive/react": "^2.0.0",
     "@tanstack/react-query": "^5.37.1",
+    "@xionhub/token": "^0.1.11",
     "date-fns": "^3.6.0",
     "jotai": "^2.8.0",
     "next": "14.2.3",

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import { XION_STYLE } from '@xionhub/token';
 
 const config: Config = {
   content: [
@@ -6,7 +7,7 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './.storybook/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  theme: {},
+  theme: XION_STYLE,
   plugins: [],
 };
 export default config;
