@@ -5,9 +5,12 @@ pre-commit:
     format:
       run: yarn format
       stage_fixed: true
+      glob: "**/*.{ts,tsx}"
     lint-next:
       run: yarn lint:next
       stage_fixed: true
+      glob: "**/*.{ts,tsx}"
     lint:
       run: yarn lint
       stage_fixed: true
+      glob: "**/*.{ts,tsx}"

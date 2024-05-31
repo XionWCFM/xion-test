@@ -1,4 +1,4 @@
-import '../src/app/style/tailwind.css';
+import '../src/app/style/root.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Providers from '~/src/app/provider/providers';
@@ -11,7 +11,7 @@ type RootLayoutProps = Readonly<{
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body className={inter.className}>
         <Providers>{children}</Providers>
         <GoogleScript />

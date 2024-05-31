@@ -16,12 +16,17 @@
 			"**/coverage",
 			"**/dist",
 			"**/lib",
-			"**/.next"
+			"**/.next",
+			".pnp.cjs",
+			".pnp.loader.mjs"
 		]
 	},
 	"organizeImports": { "enabled": true },
 	"linter": {
 		"enabled": true,
+		"ignore": [
+			"**/*.{js,cjs,mjs,jsx}"
+		],
 		"rules": {
 			"recommended": true,
 			"a11y": {

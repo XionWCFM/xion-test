@@ -1,25 +1,21 @@
-import NextImage from 'next/image';
-import { type ComponentPropsWithoutRef, type Ref, forwardRef } from 'react';
+import NextLink from 'next/link';
+import { type ComponentPropsWithoutRef, type ComponentType, type ReactNode, type Ref, forwardRef } from 'react';
 
-type ImageProps = {
-  src: string;
-  alt?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-} & ComponentPropsWithoutRef<'img'>;
+type LinkProps = {
+  href: string;
+  replace?: boolean;
+  scroll?: boolean;
+  prefetch?: boolean;
+  children?: ReactNode;
+} & ComponentPropsWithoutRef<'a'>;
 
-export const Image = forwardRef(function Image(props: ImageProps, ref: Ref<HTMLImageElement>) {
-  const { src, alt, width, height, priority, ...attributes } = props;
+export type LinkType = ComponentType<LinkProps>;
+
+export const Link = forwardRef(function Link(props: LinkProps, ref: Ref<HTMLAnchorElement>) {
+  const { href, replace, scroll, prefetch, children, ...attributes } = props;
   return (
-    <NextImage
-      src={src}
-      alt={alt ?? ''}
-      width={width ?? 100}
-      height={height ?? 100}
-      priority={priority}
-      ref={ref}
-      {...attributes}
-    />
+    <NextLink href={href} replace={replace} scroll={scroll} prefetch={prefetch} ref={ref} {...attributes}>
+      {children}
+    </NextLink>
   );
 });

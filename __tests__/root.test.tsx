@@ -1,3 +1,4 @@
+import { userEvent } from '@storybook/test';
 import { render, screen } from '@testing-library/react';
 
 describe('vitest working test ', () => {
@@ -7,8 +8,10 @@ describe('vitest working test ', () => {
 });
 
 describe('component render test', () => {
-  it('component render test', () => {
+  it('component render test', async () => {
     render(<button type={'button'}>helloworld</button>);
+    const user = userEvent.setup();
+    await user.click(screen.getByRole('button', { name: 'helloworld' }));
     expect(screen.getByRole('button', { name: 'helloworld' })).toBeInTheDocument();
   });
   it('input getByPlaceholder query test', () => {

@@ -4,7 +4,7 @@ type ButtonProps = {} & ComponentPropsWithoutRef<'button'>;
 
 const Button = ({ children, className, ...props }: ButtonProps) => {
   return (
-    <button className={` py-4 px-8 rounded-full bg-purple-400 ${className}`} {...props}>
+    <button className={` py-4  text-white px-16 rounded-full bg-primary-500 ${className}`} {...props}>
       {children}
     </button>
   );
