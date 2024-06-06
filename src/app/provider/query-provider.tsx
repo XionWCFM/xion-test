@@ -13,7 +13,7 @@ export default function QueryProvider({ children }: React.PropsWithChildren) {
             staleTime: 60 * 1000,
           },
         },
-      })
+      }),
   );
 
   return (

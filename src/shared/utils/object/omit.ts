@@ -4,7 +4,7 @@ import type { ElementType } from './types';
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export function omit<ObjectType extends Record<PropertyKey, any>, KeyTypes extends Array<ObjectKeys<ObjectType>>>(
   obj: ObjectType,
-  keys: KeyTypes
+  keys: KeyTypes,
 ) {
   return (
     objectKeys(obj)

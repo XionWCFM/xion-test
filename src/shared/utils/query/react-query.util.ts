@@ -35,7 +35,7 @@ const isEqual = (value: unknown, other: unknown): boolean => {
     }
 
     return valueKeys.every(
-      key => Object.prototype.hasOwnProperty.call(otherObj, key) && isEqual(valueObj[key], otherObj[key])
+      key => Object.prototype.hasOwnProperty.call(otherObj, key) && isEqual(valueObj[key], otherObj[key]),
     );
   }
 
