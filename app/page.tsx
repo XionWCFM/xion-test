@@ -1,5 +1,6 @@
 'use client';
 
+import { useSearchParams } from 'next/navigation';
 import { type ChangeEvent, useState } from 'react';
 
 // sheets 가 잘못되었을시 -> beams, frame 망가짐
@@ -88,6 +89,11 @@ const computeDependency = (newState: NewStateType, factory: FactoryType): Factor
 
 export default function Home() {
   const [factory, setFactory] = useState<FactoryType>({ beams: false, bolts: false, frame: false, sheets: false });
+  const searchParams = useSearchParams();
+  // biome-ignore lint/complexity/noForEach: <explanation>
+  searchParams.forEach(item => {
+    console.log(item);
+  });
   const handleCheckboxClick = (event: ChangeEvent<HTMLInputElement>) => {
     if (event.target.id === 'sheets-status') {
       setFactory(prev => computeDependency({ target: 'sheets', value: event.target.checked }, prev));
